@@ -17,6 +17,7 @@
 		3E75796D2904865100B46DB8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E757965290485F000B46DB8 /* Rubik-Regular.ttf */; };
 		3E75796E2904865300B46DB8 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E757966290485FC00B46DB8 /* Rubik-Medium.ttf */; };
 		3E75796F2904865500B46DB8 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E7579672904860500B46DB8 /* Rubik-Light.ttf */; };
+		3E75797129048F2F00B46DB8 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E75797029048F2F00B46DB8 /* Rubik-LightItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3E7579672904860500B46DB8 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		3E7579682904861200B46DB8 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		3E7579692904861200B46DB8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		3E75797029048F2F00B46DB8 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				3E7579692904861200B46DB8 /* Rubik-Bold.ttf */,
 				3E7579682904861200B46DB8 /* Rubik-SemiBold.ttf */,
 				3E757965290485F000B46DB8 /* Rubik-Regular.ttf */,
+				3E75797029048F2F00B46DB8 /* Rubik-LightItalic.ttf */,
 				3E757966290485FC00B46DB8 /* Rubik-Medium.ttf */,
 				3E7579672904860500B46DB8 /* Rubik-Light.ttf */,
 			);
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E75795E2904800A00B46DB8 /* LaunchScreen.storyboard in Resources */,
+				3E75797129048F2F00B46DB8 /* Rubik-LightItalic.ttf in Resources */,
 				3E75796B2904864C00B46DB8 /* Rubik-Bold.ttf in Resources */,
 				3E75795B2904800A00B46DB8 /* Assets.xcassets in Resources */,
 				3E75796E2904865300B46DB8 /* Rubik-Medium.ttf in Resources */,
