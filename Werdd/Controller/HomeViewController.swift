@@ -40,12 +40,11 @@ class HomeViewController: UIViewController {
     // MARK: - Initializers
     
     init(werdds: Werdds = Werdds()) {
-
+        
         self.werdds = werdds.data
-        var sorted: () = self.werdds.sort {
+        self.werdds.sort {
             $0.name < $1.name
         }
-        print(sorted)
         
         super.init(nibName: nil, bundle: nil)
     }
