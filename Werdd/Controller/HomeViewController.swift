@@ -32,7 +32,6 @@ class HomeViewController: UIViewController {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .white
         tableView.layer.cornerRadius = 30
         return tableView
     } ()
