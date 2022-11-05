@@ -53,24 +53,22 @@ class WerddTableViewCell: UITableViewCell {
     }
     
     private func setUpUI() {
-        
-        contentView.backgroundColor = UIColor(named: "Stone")
-        
+    
         setUpContainerView()
         setUpWerddLabel()
         setUpPartOfSpeechLabel()
         setUpDefinitionLabel()
+        
 
     }
     
     private func setUpContainerView() {
         contentView.addSubview(containerView)
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-            containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
         ])
     }
     
@@ -78,14 +76,14 @@ class WerddTableViewCell: UITableViewCell {
         containerView.addSubview(werddLabel)
         NSLayoutConstraint.activate([
             werddLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
-            werddLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15)
+            werddLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20)
         ])
     }
     
     private func setUpPartOfSpeechLabel() {
         containerView.addSubview(partOfSpeechLabel)
         NSLayoutConstraint.activate([
-            partOfSpeechLabel.bottomAnchor.constraint(equalTo: werddLabel.bottomAnchor, constant: -2),
+            partOfSpeechLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 13),
             partOfSpeechLabel.leadingAnchor.constraint(equalTo: werddLabel.trailingAnchor, constant: 5)
         ])
     }
@@ -94,9 +92,10 @@ class WerddTableViewCell: UITableViewCell {
     private func setUpDefinitionLabel() {
         containerView.addSubview(definitionLabel)
         NSLayoutConstraint.activate([
-            definitionLabel.topAnchor.constraint(equalTo: werddLabel.bottomAnchor, constant: 0),
+            definitionLabel.topAnchor.constraint(equalTo: werddLabel.bottomAnchor),
             definitionLabel.leadingAnchor.constraint(equalTo: werddLabel.leadingAnchor),
-            definitionLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -4),
+            definitionLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
+            definitionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
             
         ])
     }
