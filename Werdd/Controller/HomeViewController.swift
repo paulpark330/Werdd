@@ -35,8 +35,6 @@ class HomeViewController: UIViewController {
         tableView.layer.cornerRadius = 30
         tableView.register(WerddTableViewCell.self, forCellReuseIdentifier: WerddTableViewCell.cellID)
         tableView.separatorStyle = .none
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.backgroundColor = UIColor(named: "Stone")
         return tableView
     } ()
@@ -133,10 +131,6 @@ extension HomeViewController: UITableViewDataSource {
         cell.configure(werdd: werdds[indexPath.row].name, partOfSpeech: werdds[indexPath.row].partOfSpeech, definition: werdds[indexPath.row].definition)
         cell.selectionStyle = .none
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

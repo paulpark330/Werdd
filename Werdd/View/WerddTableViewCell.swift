@@ -44,7 +44,6 @@ class WerddTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setUpUI()
     }
     
@@ -95,8 +94,7 @@ class WerddTableViewCell: UITableViewCell {
             definitionLabel.topAnchor.constraint(equalTo: werddLabel.bottomAnchor),
             definitionLabel.leadingAnchor.constraint(equalTo: werddLabel.leadingAnchor),
             definitionLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            definitionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
-            
+            definitionLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10)
         ])
     }
     
