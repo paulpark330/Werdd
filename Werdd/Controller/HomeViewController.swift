@@ -32,7 +32,13 @@ class HomeViewController: UIViewController {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = UIColor(named: "Stone")
         tableView.layer.cornerRadius = 30
+        tableView.register(WerddTableViewCell.self, forCellReuseIdentifier: WerddTableViewCell.cellID)
+        tableView.separatorStyle = .none
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 68
+        
         return tableView
     } ()
     
@@ -59,10 +65,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(named: "Taupe")
-        
         tableView.dataSource = self
         tableView.delegate = self
-        
         setUpUI()
         
     }
@@ -122,15 +126,13 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
         
-        var content = cell.defaultContentConfiguration()
-        
-        content.text = werdds[indexPath.row].name
-        content.secondaryText = werdds[indexPath.row].definition
-        
-        cell.contentConfiguration = content
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WerddTableViewCell.cellID, for: indexPath) as? WerddTableViewCell else {
+            return UITableViewCell()
+        }
+            
+        cell.configure(werdd: werdds[indexPath.row].name, partOfSpeech: werdds[indexPath.row].partOfSpeech, definition: werdds[indexPath.row].definition)
+        cell.selectionStyle = .none
         return cell
     }
 }
@@ -139,8 +141,8 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: werdds[indexPath.row].name, message: werdds[indexPath.row].definition, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: werdds[indexPath.row].name, message: werdds[indexPath.row].definition, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
     }
 }
