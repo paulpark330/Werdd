@@ -11,6 +11,7 @@
 		3E4BCD3C2910EF9D005900F1 /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4BCD3B2910EF9D005900F1 /* RefreshButton.swift */; };
 		3E4BCD3E2910F127005900F1 /* RoundedViewWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4BCD3D2910F127005900F1 /* RoundedViewWithColor.swift */; };
 		3E4BCD402910F86B005900F1 /* Werdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4BCD3F2910F86B005900F1 /* Werdd.swift */; };
+		3E541EAD291859C600C7E697 /* WerddDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E541EAC291859C600C7E697 /* WerddDetailViewController.swift */; };
 		3E7579522904800900B46DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7579512904800900B46DB8 /* AppDelegate.swift */; };
 		3E7579542904800900B46DB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7579532904800900B46DB8 /* SceneDelegate.swift */; };
 		3E7579562904800900B46DB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7579552904800900B46DB8 /* HomeViewController.swift */; };
@@ -29,6 +30,7 @@
 		3E4BCD3B2910EF9D005900F1 /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
 		3E4BCD3D2910F127005900F1 /* RoundedViewWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithColor.swift; sourceTree = "<group>"; };
 		3E4BCD3F2910F86B005900F1 /* Werdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Werdd.swift; sourceTree = "<group>"; };
+		3E541EAC291859C600C7E697 /* WerddDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerddDetailViewController.swift; sourceTree = "<group>"; };
 		3E75794E2904800900B46DB8 /* Werdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werdd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7579512904800900B46DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Werdd/Supporting Files/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		3E7579532904800900B46DB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				3E7579552904800900B46DB8 /* HomeViewController.swift */,
+				3E541EAC291859C600C7E697 /* WerddDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				3E7579562904800900B46DB8 /* HomeViewController.swift in Sources */,
 				3E4BCD3C2910EF9D005900F1 /* RefreshButton.swift in Sources */,
+				3E541EAD291859C600C7E697 /* WerddDetailViewController.swift in Sources */,
 				3E23FA852915BA8100AA4462 /* WerddTableViewCell.swift in Sources */,
 				3E4BCD402910F86B005900F1 /* Werdd.swift in Sources */,
 				3E4BCD3E2910F127005900F1 /* RoundedViewWithColor.swift in Sources */,

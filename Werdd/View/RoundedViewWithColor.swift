@@ -34,8 +34,8 @@ class RoundedViewWithColor: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "creating a sequence of instructions to enable the computer to do something"
         label.font = UIFont(name: "Rubik-Light", size: 16)
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 0
+        label.lineBreakMode = .byTruncatingTail
+        label.numberOfLines = 3
         return label
     }()
     

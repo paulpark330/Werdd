@@ -49,6 +49,7 @@ class HomeViewController: UIViewController {
         }
         
         super.init(nibName: nil, bundle: nil)
+
     }
     
     
@@ -58,9 +59,14 @@ class HomeViewController: UIViewController {
     
     // MARK: - Lifecycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true , animated: true)
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()     
         view.backgroundColor = UIColor(named: "Taupe")
         tableView.dataSource = self
         tableView.delegate = self
@@ -68,6 +74,14 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+  
+
     // MARK: - UI Setup
     
     func setUpUI() {
@@ -79,7 +93,7 @@ class HomeViewController: UIViewController {
     func setUpTitleLabel() {
         view.addSubview(titleLabel)
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 18),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
         ])
     }
@@ -143,8 +157,6 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let alert = UIAlertController(title: werdds[indexPath.row].name, message: werdds[indexPath.row].definition, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
+        navigationController?.pushViewController(WerddDetailViewController(werdd: werdds[indexPath.row]), animated: true)
     }
 }
